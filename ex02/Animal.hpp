@@ -1,0 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/21 22:09:45 by mohaben-          #+#    #+#             */
+/*   Updated: 2025/08/21 22:09:46 by mohaben-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+
+#include <string>
+#include <iostream>
+
+class	Animal
+{
+	protected:
+		std::string	type;
+	public:
+		Animal( void );
+		Animal( const Animal& copy );
+		Animal&	operator=( const Animal& copy );
+		virtual	~Animal( void );
+		std::string		getType( void ) const;
+		virtual void	makeSound( void ) const = 0;
+};

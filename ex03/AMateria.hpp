@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/21 22:12:25 by mohaben-          #+#    #+#             */
+/*   Updated: 2025/08/21 22:12:28 by mohaben-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#pragma once
+
+#include <string>
+#include <iostream>
+#include "ICharacter.hpp"
+
+class AMateria
+{
+	protected:
+		std::string	type;
+	public:
+		AMateria( void );
+		AMateria( std::string const & type );
+		AMateria( const AMateria& copy );
+		AMateria&	operator=( const AMateria& copy );
+		virtual ~AMateria( void );
+		std::string const & getType() const;
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
+};
