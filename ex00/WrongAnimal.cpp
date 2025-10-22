@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:07:21 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:07:23 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "WrongAnimal.hpp"
 
 WrongAnimal::WrongAnimal( void ) : type("Unknown")
@@ -24,8 +12,7 @@ WrongAnimal::WrongAnimal( const WrongAnimal& copy ) : type(copy.type)
 
 WrongAnimal&	WrongAnimal::operator=( const WrongAnimal& copy )
 {
-	if (this != &copy)
-		this->type = copy.type;
+	this->type = copy.type;
 	std::cout << "WrongAnimal assignment operator called." << std::endl;
 	return (*this);
 }

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:07:28 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:07:29 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat( void )
@@ -25,8 +13,7 @@ WrongCat::WrongCat( const WrongCat& copy ) : WrongAnimal(copy)
 
 WrongCat&	WrongCat::operator=( const WrongCat& copy )
 {
-	if (this != &copy)
-		type = copy.type;
+	type = copy.type;
 	std::cout << "WrongCat copy assignment operator called." << std::endl;
 	return (*this);
 }

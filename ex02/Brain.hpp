@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:09:54 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:09:55 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #pragma once
 
 #include <string>
@@ -22,7 +10,8 @@ class	Brain
 	public:
 		Brain( void );
 		Brain( const Brain& copy );
-		Brain&	operator=( const Brain& copy );
+		Brain&	operator=( const Brain&
+		 copy );
 		~Brain( void );
 		void		setIdea(int index, const std::string& idea);
 		std::string	getIdea(int index) const;

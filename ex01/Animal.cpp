@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:07:44 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:07:45 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Animal.hpp"
 
 Animal::Animal( void ) : type("Unknown")
@@ -24,8 +12,7 @@ Animal::Animal( const Animal& copy ) : type(copy.type)
 
 Animal&	Animal::operator=( const Animal& copy )
 {
-	if (this != &copy)
-		type = copy.type;
+	type = copy.type;
 	std::cout << "Animal assignment operator called." << std::endl;
 	return (*this);
 }

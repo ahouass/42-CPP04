@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:08:48 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:08:49 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Dog.hpp"
 
 Dog::Dog( void )
@@ -27,12 +15,9 @@ Dog::Dog( const Dog& copy ) : Animal(copy)
 
 Dog&	Dog::operator=( const Dog& copy )
 {
-	if (this != &copy)
-	{
-		type = copy.type;
-		delete brain;
-		brain = new Brain(*copy.brain);
-	}
+	type = copy.type;
+	delete brain;
+	brain = new Brain(*copy.brain);
 	std::cout << "Dog assignment operator called." << std::endl;
 	return (*this);
 }

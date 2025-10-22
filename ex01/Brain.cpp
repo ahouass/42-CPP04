@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Brain.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:08:21 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:08:27 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Brain.hpp"
 
 Brain::Brain( void )
@@ -26,11 +14,8 @@ Brain::Brain( const Brain& copy )
 
 Brain&	Brain::operator=( const Brain& copy )
 {
-	if (this != &copy)
-	{
-		for (int i = 0; i < 100; i++)
-			ideas[i] = copy.ideas[i];
-	}
+	for (int i = 0; i < 100; i++)
+		ideas[i] = copy.ideas[i];
 	std::cout << "Brain assignment operator called." << std::endl;
 	return (*this);
 }

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mohaben- <mohaben-@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/21 22:06:47 by mohaben-          #+#    #+#             */
-/*   Updated: 2025/08/21 22:50:44 by mohaben-         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "Cat.hpp"
 
 Cat::Cat( void )
@@ -25,8 +13,7 @@ Cat::Cat( const Cat& copy ) : Animal(copy)
 
 Cat&	Cat::operator=( const Cat& copy )
 {
-	if (this != &copy)
-		type = copy.type;
+	type = copy.type;
 	std::cout << "Cat assignment operator called." << std::endl;
 	return (*this);
 }
